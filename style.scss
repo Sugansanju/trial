@@ -1,0 +1,128 @@
+$blue:    #007bff !default;
+$indigo:  #6610f2 !default;
+$purple:  #6f42c1 !default;
+$pink:    #e83e8c !default;
+$red:     #dc3545 !default;
+$orange:  #fd7e14 !default;
+$yellow:  #ffc107 !default;
+$green:   #28a745 !default;
+$teal:    #20c997 !default;
+$cyan:    #17a2b8 !default;
+
+$border-radius:               0.5rem !default;
+$border-radius-lg:            0rem !default;
+$border-radius-sm:            0rem !default;
+
+$input-btn-focus-width:       0rem !default;
+
+$input-btn-focus-box-shadow:  0 0 0 0 !default;
+:root{
+    --main-primary-color:#57daf2;
+    --main-link-color:#696969;
+
+}
+body{
+    font-family:initial;
+}
+ .btn{
+    text-align:center;
+    background-color: var(--main-primary-color);
+    width:50%;
+    padding:20px;
+ }
+.icon{
+    font-size:24px;
+}
+.card {
+ border: $border-radius;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    max-height:500px;
+    margin: auto;
+    margin-top:150px;
+}
+.rounded {
+  border-radius: 10px;
+  background: #000;
+}
+.header{
+    text-align:center;
+}
+
+.form-control {
+   border:none !important;
+   border-bottom: 1px #ccc solid !important;
+   background: #fff !important;
+   display: block;
+   width: 100%;
+   padding: 12px 50px;
+   font-size:40px;
+   line-height: 1.6px;
+   color: black;
+   background-clip: padding-box;
+  // border: none solid var(--main-primary-color);
+}
+.form-control:focus ~ label, .form-control.used ~ label {
+	top: -20px;
+  transform: scale(.75); left: -2px;
+	/* font-size: 14px; */
+	color:var(--main-primary-color);
+}
+
+.input-field {
+    margin:15px;
+  position: relative;
+  width: 250px;
+  height: 44px;
+ border:none !important;
+ /* border-bottom: 1px #ccc solid !important; */
+ background: #fff !important;
+
+}
+label {
+  position:absolute;
+  top: 0;
+  width: 100%;
+  color: #d3d3d3;
+  transition: 0.2s all;
+}
+input {
+  width: 100%;
+  border: 0;
+  outline: 0;
+  padding: 0;
+  border-bottom: 2px solid #d3d3d3;
+}
+input:focus,
+input:valid {
+  border-color: var(--main-primary-color);
+}
+input:focus~label,
+input:valid~label {
+  top: -24px;
+  color: var(--main-primary-color);
+}
+.link:link,.link:visited {
+    color:var(--main-link-color);
+    border: 5px solid var(--main-primary-color);
+    padding: 15px 50px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+.link:hover,.link:active {
+    background-color:var(--main-primary-color);
+}
+@media screen and (max-width:800px){
+
+
+}
+.llink:visited{
+    color:var(--main-link-color);
+}
+.llink:hover{
+    color:var(--main-primary-color);
+}
+.blink:visited{
+    color:var(--main-link-color);
+}
