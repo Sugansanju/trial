@@ -16,13 +16,17 @@
     <input type="password" id="password" required>
     <label for="password">password</label>
 </div>
-<center> <a href="#/signup" class="btn blink" role="button" style="margin:12px;">Signin</a></center>
  <a href="" class="forgot-pw llink">Forgot Password ?</a>
-<a href="#/signup" class="sign-up llink">Signup here!</a>
-<span  class="instead" style="margin:30px;cursor:pointer;" v-if="primarylogin=='email'" @click="changeprimarylogin">UsePhone</span>
-<span  class="instead" style="margin:30px;cursor:pointer;" v-if="primarylogin=='mobile'" @click="changeprimarylogin">Use Email</span>
+ <span class="instead text-center text-primary" style="cursor:pointer;" v-if="primarylogin=='email'" @click="changeprimarylogin">Use Phone</span>
+ <span class="instead text-center text-primary" style="cursor:pointer;" v-if="primarylogin=='mobile'" @click="changeprimarylogin">Use Email</span>
+<center> <a href="#/signup" class="btn blink" role="button" style="margin:12px;">Signin</a></center>
 </div>
+
 </div>
+<p class="mt-3 text-center">
+        New user?
+        <a  href="#/signup">Create an account</a>
+      </p>
 
   </div>
 </template>
@@ -58,18 +62,13 @@ body{
 }
 .forgot-pw{
  font: 600 14px/1 'Roboto',sans-serif;
- float:left;
+ float:right;
  margin:0 0 25px 0;
  display:block;
 }
-.sign-up{
-    font: 600 14px/1 'Roboto',sans-serif;
-    float:right;
-    margin:0 0 25px 0;
-    display:block;
-}
 .instead{
     font: 600 14px/1 'Roboto',sans-serif;
+    float:left;
     margin:0 0 25px 0;
     display:block;
 }

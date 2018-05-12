@@ -20,10 +20,10 @@
     <input type="password" id="password" required>
     <label for="password">password</label>
 </div>
+<a href="" class="forgot-pw llink">Forgot Password ?</a>
+<span class="instead text-center text-primary" style="cursor:pointer;" v-if="primarylogin=='email'" @click="changeprimarylogin">Use Phone</span>
+<span class="instead text-center text-primary" style="cursor:pointer;" v-if="primarylogin=='mobile'" @click="changeprimarylogin">Use Email</span>
 <center> <a href="#/signup" class="btn blink" role="button" style="margin:12px;">Signup</a></center>
- <a href="" class="forgot-pw llink">Forgot Password ?</a>
-<span  class="instead" style="margin:30px;cursor:pointer;" v-if="primarylogin=='email'" @click="changeprimarylogin">UsePhone</span>
-<span  class="instead" style="margin:30px;cursor:pointer;" v-if="primarylogin=='mobile'" @click="changeprimarylogin">Use Email</span>
 </div>
 </div>
   </div>
