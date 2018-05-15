@@ -5,11 +5,12 @@
          <h5 class="card-title text-center">Email verify</h5>
 
          <div class="input-field">
-             <input type="email" id="email" class="input" style="margin:12px;" required>
+         <input type="email" id="email" class="input" style="margin:12px;" v-model="email" required>
+             <!-- <span v-if="error">{{error}}</span> -->
              <label for="email" class="label" style="margin:12px;">Email</label>
          </div>
- <a href="#/otp" class="btn blink update" role="button">Update</a>
-<a href="#/accountdetail" class="btn blink skip" role="button" >Skip now</a>
+ <a href="javascipt:void(0);" @click="submitform" class="button blink update" role="button">Update</a>
+ <a href="#/accountdetail" class="button blink skip" role="button" >Skip</a>
 </div>
 </div>
   </div>
@@ -17,7 +18,25 @@
 
 <script>
 export default {
+  data() {
+    return {
+      email:null,
+      error : ''
+    }
+  },
+  methods : {
+    submitform() {
+       let reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
 
+      if(this.email=='' || this.email==null){
+        alert(this.error = 'Please enter email!');
+      }else if(reg.test(this.email)==false)
+      {
+alert(this.error = 'Please enter valid email address only!');
+      } else{
+this.$router.push({path:'/otp'});
+      }   }
+  }
 
 }
 </script>

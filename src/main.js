@@ -5,7 +5,8 @@ import VueButton from 'vue-button'
 import App from './App'
 import router from './router'
 import Dropdown from 'hsy-vue-dropdown'
-
+import Vuelidate from 'vuelidate'
+Vue.use(Vuelidate)
 Vue.use(Dropdown)
 Vue.config.productionTip = false
 

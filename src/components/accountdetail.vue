@@ -1,40 +1,106 @@
 <template>
   <div class="hello">
-         <div class="card d-flex justify-content-center w3-animate-top">
-             <div class="card-body">
-         <h5 class="card-title text-center">Account details</h5>
-        <div class="avatar"></div>
-        <div class="input-field">
-        <input type="file">
-    </div>
-    <div class="row">
-    <!-- <label for="gender" class="lbl" style="margin:12px;">Gender</label>
-        <dropdown :data="data" :Changed="changed"></dropdown> -->
-        <!-- <label for="component-dropdown">Component-based dropdown: </label>
-      <dropdown id="component-dropdown" :options="fruitOptions"></dropdown> -->
+<div class="card-account d-flex justify-content-center w3-animate-top">
+    <div class="card-body">
+        <!-- <h5 class="card-title text-center">Account details</h5>
+        <div class="avatar"><input type="file"></div>
+
+        <div class="col-lg-4 order-lg-2">
+            <div class=" py-5 text-center">
+
+                </div>
+                </div>
+                <div class="tab-pane" id="edit">
+                    <form role="form">
+                        <div class="form-group row">
+                            <label class="col-lg-3 col-form-label form-control-label">First name</label>
+                            <div class="col-lg-5">
+                                <input class="form-control" type="text" placeholder="First name">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-lg-3 col-form-label form-control-label">Last name</label>
+                            <div class="col-lg-5">
+                                <input class="form-control" type="text" placeholder="Lastname">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-lg-3 col-form-label form-control-label">Gender</label>
+                            <div class="col-lg-5">
+                                <select id="gender" class="form-control" size="0">
+                                    <option value="Male">Select</option>
+                                    <option value="Male">Male</option>
+                                    <option value="Female">Female</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-lg-3 col-form-label form-control-label">Date of Birth</label>
+                            <div class="col-lg-5">
+                                <input class="form-control" type="text" placeholder="DD/MM/YYYY">
+                            </div>
+                        </div>                        <div class="form-group row">
+                            <label class="col-lg-3 col-form-label form-control-label"></label>
+                            <div class="col-lg-5">
+                                <a href="#/" class="button blink update" role="button">Save</a>
+                               <a href="#/" class="button blink skip" role="button" >Skip</a>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
 </div>
-<div class="row">
-<div class="col-mt-2">
-<label for="date">DOB</label>
-     <datepicker class-design="input-style"></datepicker>
-</div>
-</div>
-    <label for="date">Gender</label>
-    <div class="dropdown col-mt-2">
-    <select name="one" class="dropdown-select">
-      <option value="">Select…</option>
-      <option value="1">male</option>
-      <option value="2">Female</option>
-    </select>
-  
-</div>
+</div> -->
+<div id="f1_container">
+      <div id="f1_card" class="shadow">
+        <div class="front face" style="margin-top:12px;">
+         Account details
+        </div>
+        <div class="back face center">
+            <div class="tab-pane" id="edit">
+                  <form role="form">
+                      <div class="form-group row">
+
+                          <div class="col-lg-12">
+                              <input class="form-control" type="text" placeholder="First name">
+                          </div>
+                      </div>
+                      <div class="form-group row">
+                          <div class="col-lg-12">
+                              <input class="form-control" type="text" placeholder="Lastname">
+                          </div>
+                      </div>
+                      <div class="form-group row">
+
+                          <div class="col-lg-12">
+                              <select id="gender" class="form-control" size="0">
+                                  <option value="Male">Select</option>
+                                  <option value="Male">Male</option>
+                                  <option value="Female">Female</option>
+                              </select>
+                          </div>
+                      </div>
+
+                      <div class="form-group row">
+                          <label class="col-lg-3 col-form-label form-control-label"></label>
+                          <div class="col-lg-5">
+                              <a href="#/" class="button blink update" role="button">Save</a>
+                             <a href="#/" class="button blink skip" role="button" >Skip</a>
+                          </div>
+                      </div>
+                  </form>
+              </div>
+        </div>
+      </div>
+      </div>
 </div>
 </div>
 </div>
 </template>
 
 <script>
-
+import { required, minLength, between } from 'vuelidate/lib/validators'
 import Avatar from 'vue-avatar-component'
 import Datepicker from 'vuejs-datepicker'
 export default {
@@ -55,7 +121,6 @@ export default {
      components: {
           Avatar,
           Datepicker,
-         // 'dropdown': Dropdown
       },
 
       methods:{
@@ -76,119 +141,64 @@ body{
     height:100%;
     margin:12px;
 }
+#f1_container {
+  position: relative;
+  margin: 10px auto;
+  width: 450px;
+  height: 281px;
+  z-index: 1;
+}
+#f1_container {
+  perspective: 1000;
+}
+#f1_card {
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: all 1.0s linear;
+}
+#f1_container:hover #f1_card {
+  transform: rotateY(180deg);
+  box-shadow: -5px 5px 5px #aaa;
+}
+.face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  font-size:30px;
+  text-align: center;
+  backface-visibility: hidden;
+}
+.face.back {
+  display: block;
+  transform: rotateY(180deg);
+  box-sizing: border-box;
+  padding: 10px;
+  text-align: center;
+}
+.card-account{
+    border: $border-radius;
+    box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width:750px;
+    max-height:750px;
+    margin: auto;
+    margin-top:150px;
+}
 .input-style {
     display: block;
-    padding:2px;
+    padding:12px;
     font-size:12px;
     line-height:12px;
     background-color: #ffffff;
     border: 1px solid #B7B7B7;
     border-radius: 4px;
+    margin:12px;
 }
-.dropdown {
-  display: inline-block;
-  position: relative;
-  overflow: hidden;
-  height: 28px;
-  width: 250px;
-
-  border: 1px solid;
-
-  border-radius: 3px;
-  background-image: -webkit-linear-gradient(top, transparent, rgba(0, 0, 0, 0.06));
-  background-image: -moz-linear-gradient(top, transparent, rgba(0, 0, 0, 0.06));
-  background-image: -o-linear-gradient(top, transparent, rgba(0, 0, 0, 0.06));
-  background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.06));
-  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.08);
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.08);
-}
-
-.dropdown:before, .dropdown:after {
-  content: '';
-  position: absolute;
-  z-index: 2;
-  top: 9px;
-  right: 10px;
-  width: 0;
-  height: 0;
-  border: 4px dashed;
-  border-color: #888888 transparent;
-  pointer-events: none;
-}
-
-.dropdown:before {
-  border-bottom-style: solid;
-  border-top: none;
-}
-
-.dropdown:after {
-  margin-top: 7px;
-  border-top-style: solid;
-  border-bottom: none;
-}
-
-.dropdown-select {
-  position: relative;
-  width: 130%;
-  margin: 0;
-  padding: 6px 8px 6px 10px;
-  height: 28px;
-  line-height: 14px;
-  font-size: 12px;
-  color: #62717a;
-  text-shadow: 0 1px white;
-  background: #f2f2f2; /* Fallback for IE 8 */
-  background: rgba(0, 0, 0, 0) !important; /* "transparent" doesn't work with Opera */
-  border: 0;
-  border-radius: 0;
-  -webkit-appearance: none;
-}
-
-.dropdown-select:focus {
-  z-index: 3;
-  width: 100%;
-  color: #394349;
-  outline: 2px solid #49aff2;
-  outline: 2px solid -webkit-focus-ring-color;
-  outline-offset: -2px;
-}
-
-.dropdown-select > option {
-  margin: 3px;
-  padding: 6px 8px;
-  text-shadow: none;
-  background: #f2f2f2;
-  border-radius: 3px;
-  cursor: pointer;
-}
-
-/* Fix for IE 8 putting the arrows behind the select element. */
-
-.lt-ie9 .dropdown {
-  z-index: 1;
-}
-
-.lt-ie9 .dropdown-select {
-  z-index: -1;
-}
-
-.lt-ie9 .dropdown-select:focus {
-  z-index: 3;
-}
-
-/* Dirty fix for Firefox adding padding where it shouldn't. */
-
-@-moz-document url-prefix() {
-  .dropdown-select {
-    padding-left: 6px;
-  }
-}
-
 .avatar {
   position: relative;
   overflow: hidden;
-  width:50px;
-  height: 50px;
+  width:100px;
+  height: 100px;
   margin: auto;
   background: #ddd;
   -webkit-border-radius: 50%;
@@ -229,10 +239,14 @@ body{
   border-radius: 50%;
   z-index: 10
 }
-
-.lbl{
-    color:var(--main-secondary-color);
-    padding-right:50px;
-    margin:55px;
+.blink{
+    width:28%;
+    padding:10px;
+}
+.update{
+    float:left;
+}
+.skip{
+ float:right;
 }
 </style>

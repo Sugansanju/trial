@@ -18,7 +18,8 @@
     "vue-avatar-component": "^1.2.4",
     "vue-button": "^0.1.0",
     "vue-router": "^3.0.1",
-    "vuejs-datepicker": "^1.2.0"
+    "vuejs-datepicker": "^1.2.0",
+    "vuelidate": "^0.6.2"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.2",

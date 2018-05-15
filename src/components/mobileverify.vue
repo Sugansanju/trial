@@ -7,8 +7,8 @@
              <input type="text" id="mobile" class="input" style="margin:12px;" required>
              <label for="mobile" class="label" style="margin:12px;">Mobile number</label>
          </div>
- <a href="#/otp" class="btn blink update" role="button">Update</a>
-<a href="#/accountdetail" class="btn blink skip" role="button" >Skip now</a>
+ <a href="#/otp" class="button blink update" role="button">Update</a>
+<a href="#/accountdetail" class="button blink skip" role="button" >Skip now</a>
 </div>
 </div>
   </div>

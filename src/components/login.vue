@@ -24,7 +24,7 @@
  <!-- <a href="" class="forgot-pw text-primary">Forgot Password ?</a> -->
  <!-- <span class="instead text-center text-primary" style="cursor:pointer;" v-if="primarylogin=='email'" @click="changeprimarylogin">Use Phone</span>
  <span class="instead text-center text-primary" style="cursor:pointer;" v-if="primarylogin=='mobile'" @click="changeprimarylogin">Use Email</span> -->
-<center><a href="#/signup " class="btn blink align-self-center" role="button" style="margin:25px;">Signin</a></center>
+<center><a href="#/signup " class="btn bclink align-self-center" role="button" style="margin:25px;">Signin</a></center>
 </div>
 
 </div>

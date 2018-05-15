@@ -8,7 +8,7 @@
     <label for="name" class="label" >Name</label>
   </div>
   <div class="input-field" v-if="primarylogin=='email'">
-      <input type="email" id="email" class="input" required>
+      <input type="email" id="email" class="input" v-model="email"required>
       <label for="email" class="label">Email</label>
   </div>
 <div class="input-field" v-if="primarylogin=='mobile'">
@@ -23,7 +23,8 @@
 <a href="" class="forgot-pw llink">Forgot Password ?</a>
 <span class="instead text-center text-primary" style="cursor:pointer;" v-if="primarylogin=='email'" @click="changeprimarylogin">Use Phone</span>
 <span class="instead text-center text-primary" style="cursor:pointer;" v-if="primarylogin=='mobile'" @click="changeprimarylogin">Use Email</span>
-<center> <a href="#/otp" class="btn blink" role="button" style="margin:25px;">Signup</a></center>
+<center> <a href="javascipt:void(0);" @click="validation" class="btn" role="button" style="margin:25px;">Signup</a></center>
+
 </div>
 </div>
   </div>
@@ -33,7 +34,10 @@
 export default {
     data(){
         return{
-            primarylogin:'email'
+            primarylogin:'email',
+            email:null,
+            name:null,
+            error:''
         }
     },
     methods:{
@@ -43,7 +47,20 @@ export default {
             }else{
                 this.primarylogin='email'
             }
-        }
+        },
+        validation(){
+        let reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+       if(this.email=='' || this.email==null){
+         alert(this.error = 'Please enter email!');
+       }else if(reg.test(this.email)==false)
+       {
+    alert(this.error = 'Please enter valid email address only!');
+}
+ else{
+    this.$router.push({path:'/otp'});
+       }
+
+       }
     }
 }
 </script>
@@ -53,9 +70,6 @@ body{
     /* background-color:var(--main-primary-color); */
     font-family:Arial Black;
     font-size: 15px;
-}
-form {
-  margin:100px;
 }
 .forgot-pw{
  font: 600 14px/1 'Roboto',sans-serif;
