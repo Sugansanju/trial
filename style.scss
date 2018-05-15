@@ -18,15 +18,18 @@ $input-btn-focus-width:       0rem !default;
 $input-btn-focus-box-shadow:  0 0 0 0 !default;
 :root{
     --main-primary-color:#57daf2;
-    --main-link-color:#696969;
+    --main-secondary-color:#000000;
+    --main-link-color: #1E90FF;
 
 }
 body{
-    font-family:initial;
+    font-family:Arial Black;
+    font-size: 30px;
 }
  .btn{
     text-align:center;
-    background-color: var(--main-primary-color);
+    background-color:var(--main-link-color);
+    font-size:12px;
     width:50%;
     padding:20px;
  }
@@ -34,10 +37,10 @@ body{
     font-size:24px;
 }
 .card {
- border: $border-radius;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    max-width: 300px;
-    max-height:500px;
+    border: $border-radius;
+    box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width:370px;
+    max-height:450px;
     margin: auto;
     margin-top:150px;
 }
@@ -62,31 +65,31 @@ body{
    background-clip: padding-box;
   // border: none solid var(--main-primary-color);
 }
-.form-control:focus ~ label, .form-control.used ~ label {
+.form-control:focus ~ .label, .form-control.used ~ .label {
 	top: -20px;
   transform: scale(.75); left: -2px;
 	/* font-size: 14px; */
-	color:var(--main-primary-color);
+	color:var(--main-link-color);
 }
 
 .input-field {
-    margin:15px;
+ margin:25px;
   position: relative;
-  width: 250px;
+  width:250px;
   height: 44px;
  border:none !important;
  /* border-bottom: 1px #ccc solid !important; */
  background: #fff !important;
 
 }
-label {
+.label {
   position:absolute;
   top: 0;
   width: 100%;
   color: #d3d3d3;
   transition: 0.2s all;
 }
-input {
+.input {
   width: 100%;
   border: 0;
   outline: 0;
@@ -95,23 +98,23 @@ input {
 }
 input:focus,
 input:valid {
-  border-color: var(--main-primary-color);
+  border-color: var(--main-link-color);
 }
 input:focus~label,
 input:valid~label {
   top: -24px;
-  color: var(--main-primary-color);
+  color: var(--main-link-color);
 }
 .link:link,.link:visited {
-    color:var(--main-link-color);
-    border: 5px solid var(--main-primary-color);
-    padding: 15px 50px;
+    color:var(--main-secondary-color);
+    // border: 5px solid var(--main-link-color);
+    // padding: 15px 50px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
 }
 .link:hover,.link:active {
-    background-color:var(--main-primary-color);
+    // background-color:var(--main-link-color);
 }
 @media screen and (max-width:800px){
 
@@ -121,8 +124,8 @@ input:valid~label {
     color:var(--main-link-color);
 }
 .llink:hover{
-    color:var(--main-primary-color);
+    color:var(--main-secondary-color);
 }
 .blink:visited{
-    color:var(--main-link-color);
+    color:var(--main-secondary-color);
 }

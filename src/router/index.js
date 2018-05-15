@@ -5,6 +5,9 @@ import Role from '@/components/Role'
 import Login from '@/components/Login'
 import Signup from '@/components/Signup'
 import Otp from '@/components/Otp'
+import Emailverify from '@/components/Emailverify'
+import Mobileverify from '@/components/Mobileverify'
+import Accountdetail from '@/components/Accountdetail'
 Vue.use(Router)
 
 export default new Router({
@@ -33,6 +36,21 @@ export default new Router({
   path: '/otp',
   name: 'Otp',
   component:Otp
+},
+{
+  path: '/emailverify',
+  name: 'Emailverify',
+  component:Emailverify
+},
+{
+  path: '/mobileverify',
+  name: 'Mobileverify',
+  component:Mobileverify
+},
+{
+  path: '/accountdetail',
+  name: 'Accountdetail',
+  component:Accountdetail
 }
   ]
 })

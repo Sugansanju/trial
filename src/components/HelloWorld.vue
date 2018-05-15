@@ -20,6 +20,6 @@ export default {
 
 <style >
 body{
-    background-color:var(--main-primary-color);
+    /* background-color:var(--main-primary-color); */
 }
 </style>

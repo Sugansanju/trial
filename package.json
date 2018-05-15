@@ -12,9 +12,13 @@
   "dependencies": {
     "@material/textfield": "^0.35.1",
     "bootstrap": "^4.1.1",
+    "hsy-vue-dropdown": "0.0.5",
     "vue": "^2.5.2",
+    "vue-avatar": "^2.1.4",
+    "vue-avatar-component": "^1.2.4",
     "vue-button": "^0.1.0",
-    "vue-router": "^3.0.1"
+    "vue-router": "^3.0.1",
+    "vuejs-datepicker": "^1.2.0"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.2",

@@ -4,26 +4,26 @@
              <div class="card-body">
          <h5 class="card-title text-center">Signup</h5>
   <div class="input-field">
-    <input type="text" id="name" required >
-    <label for="name">Name</label>
+    <input type="text" id="name" class="input" required >
+    <label for="name" class="label" >Name</label>
   </div>
   <div class="input-field" v-if="primarylogin=='email'">
-      <input type="email" id="email" required>
-      <label for="email">Email</label>
+      <input type="email" id="email" class="input" required>
+      <label for="email" class="label">Email</label>
   </div>
 <div class="input-field" v-if="primarylogin=='mobile'">
-    <input type="text" id="mobile" required>
-    <label for="mobile">Mobile</label>
+    <input type="text" id="mobile" class="input" required>
+    <label for="mobile" class="label">Mobile</label>
 </div>
 
 <div class="input-field">
-    <input type="password" id="password" required>
-    <label for="password">password</label>
+    <input type="password" class="input" id="password" required>
+    <label for="password" class="label">password</label>
 </div>
 <a href="" class="forgot-pw llink">Forgot Password ?</a>
 <span class="instead text-center text-primary" style="cursor:pointer;" v-if="primarylogin=='email'" @click="changeprimarylogin">Use Phone</span>
 <span class="instead text-center text-primary" style="cursor:pointer;" v-if="primarylogin=='mobile'" @click="changeprimarylogin">Use Email</span>
-<center> <a href="#/signup" class="btn blink" role="button" style="margin:12px;">Signup</a></center>
+<center> <a href="#/otp" class="btn blink" role="button" style="margin:25px;">Signup</a></center>
 </div>
 </div>
   </div>
@@ -50,9 +50,9 @@ export default {
 
 <style >
 body{
-    background-color:var(--main-primary-color);
-    font-family:initial;
-    font-size:20px;
+    /* background-color:var(--main-primary-color); */
+    font-family:Arial Black;
+    font-size: 15px;
 }
 form {
   margin:100px;

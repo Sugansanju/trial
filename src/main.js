@@ -4,7 +4,9 @@ import Vue from 'vue'
 import VueButton from 'vue-button'
 import App from './App'
 import router from './router'
+import Dropdown from 'hsy-vue-dropdown'
 
+Vue.use(Dropdown)
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */
