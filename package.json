@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "@material/textfield": "^0.35.1",
-    "bootstrap": "^4.1.1",
+    "bootstrap": "^4.3.1",
     "hsy-vue-dropdown": "0.0.5",
     "vue": "^2.5.2",
     "vue-avatar": "^2.1.4",
